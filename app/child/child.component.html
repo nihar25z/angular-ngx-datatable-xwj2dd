@@ -1,0 +1,256 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      font-family: 'Poppins', sans-serif;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      align-items: center;
+      background-color: rgb(237, 233, 224);
+  }
+
+  .card-container {
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+      padding: 2rem;
+      width: 20rem;
+      margin: .5rem;
+      border-radius: .4rem;
+  }
+
+  .cart-top-navigation {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .cart-top-navigation li,
+  .cart-top-navigation ul {
+      list-style: none;
+      font-size: 1.2rem;
+  }
+
+  .cart-top-navigation ul i {
+      margin-left: 10px;
+  }
+
+  .user-image {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+  }
+
+  .user-image img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+  }
+
+  .user-name,
+  .about-user {
+      text-align: center;
+      margin-top: 1.5rem;
+  }
+
+  .user-name {
+      font-size: 1.4rem;
+  }
+
+  .hire-me {
+      /* width: 8rem; */
+      /* margin: 1.5rem auto;
+      display: block;
+      border: none;
+      padding: .8rem 1.6rem;
+      border-radius: 2rem;
+      font-size: 1rem;
+      cursor: pointer;
+  }
+
+  .hire-me:hover {
+      background: radial-gradient(circle at 100% 107%, #fdf497 0%, #fdf497 5%#fd5949 45%, #d6249f 60%, #285aeb 90%);
+
+  }
+
+  .social-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+  }
+
+  .social-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 1rem;
+  }
+
+  .social-item li {
+      list-style: none;
+      padding: 0.8rem;
+      border-radius: 15%;
+  }
+
+  .instagram {
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  }
+
+  .youtube {
+      background-color: #ff0000;
+  }
+
+  .twitter {
+      background-color: #1D9BF0;
+  }
+
+  .social-item i {
+      font-size: 1.5rem;
+  }
+
+  .social-item span {
+      margin-top: .5rem;
+  }
+
+  .container{
+      display: flex;
+  }
+
+  .profile{
+      position: relative;
+      width: 60px;
+      margin: 0 1em;
+      height: 60px;
+      border-radius: 50%;
+      /* background: url(../assets/l-2.jpg); */
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      box-shadow: 0 0 0 4px #fff, 0 0 0 5px #246df5;
+      transition: 0.2s;
+  }
+
+  .profile:hover{
+      box-shadow: 0 0 0 4px #fff,0 0 0 6px #d10fd8;;
+  }
+
+  .content{
+      /* position: absolute;
+      bottom: 75px;
+      padding: 20px;
+      min-width: 400px;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: 0.5s; */
+      position: absolute;
+      /* bottom: 110px; */
+      top: pagex;
+      padding: 10px;
+      min-width: max-content;
+      background-color: #f9f9f9;
+      /* border: 1px solid #ccc; */
+      border-radius: 10px;
+      visibility: hidden;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: 0.5s;
+      left: pagey;
+  }
+
+  .content .header{
+      display: flex;
+      align-items: center;
+
+  }
+
+  .content .header .img{
+      grid-column: 1/2;
+      width: 0px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+  }
+
+  .content .header .infos{
+      margin-left: 1em;
+  }
+
+  .content .header .infos .name{
+      font-size: 1.25em;
+      color: #333;
+      letter-spacing: 1px;
+      font-size: 600;
+  }
+
+  .content .header .infos .title{
+      font-size: 0.9em;
+      color: #969696;
+      font-size: 500 !important;
+      margin-top: 5px;
+  }
+
+
+  .content .body{
+      padding: 1em;
+  }
+
+  .content .body p{
+      font-size: 0.95em;
+      color: #272727;
+  }
+
+   .content{
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(-15%) translateY(0px);
+  }
+</style>
+
+<p>{{ pagex }}</p>
+<p>{{ pagey }}</p>
+<!-- <ng-template #popoverContent> -->
+<div class="content" id="lowEnd" *ngIf="display">
+  <div class="header">
+    <img
+      src="../assets/l-2.jpg"
+      alt="Img"
+      height="60px"
+      width="60px"
+      style="border-radius: 50%;"
+    />
+    <div class="infos">
+      <h3 class="name">Nihar Zatakiya</h3>
+      <p class="title">Web Developer</p>
+      <button (click)="onButtonClick()">Click me</button>
+      <button (click)="setDate()">x</button>
+    </div>
+  </div>
+</div>
+<!-- </ng-template> -->
+<!-- <div>123</div> -->
+<!-- <button
+type="button"
+class="btn btn-outline-secondary mr-2"
+[ngbPopover]="popoverContent"
+#popover="ngbPopover"
+triggers="manual"
+(click)="openPopover(popover)"
+>
+Open Popover
+</button> -->

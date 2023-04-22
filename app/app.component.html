@@ -1,0 +1,38 @@
+<hello name="{{ name }}"></hello>
+<p>Start editing to see some magic happen :)</p>
+
+<ngx-datatable
+  [rows]="rows"
+  class="material"
+  [loadingIndicator]="loadingIndicator"
+  [columnMode]="'force'"
+  [headerHeight]="50"
+  [footerHeight]="50"
+  [rowHeight]="'auto'"
+  [columns]="columns"
+  [reorderable]="reorderable"
+  (activate)="onActivate($event)"
+>
+  <!-- <div class="parent-component" id="comp-render" *ngIf="display">
+    <app-child class="child-component"></app-child>
+  </div> -->
+  <ngx-datatable-column prop="name"> </ngx-datatable-column>
+
+  <ngx-datatable-column prop="gender">
+    <!-- </ngx-datatable-column>
+  <ngx-datatable-column prop="gender" *ngIf="display">
+    <ng-template let-cell="cell" ngx-datatable-cell-template>
+      <div class="parent-component" id="comp-render">
+        <app-child class="child-component"></app-child>
+      </div>
+    </ng-template> -->
+  </ngx-datatable-column>
+
+  <ngx-datatable-column prop="company"> </ngx-datatable-column>
+</ngx-datatable>
+<div class="parent-component" id="comp-render" *ngIf="display">
+  <app-child
+    class="child-component"
+    (myEvent)="onChildEvent($event)"
+  ></app-child>
+</div>
